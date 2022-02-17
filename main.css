@@ -1,0 +1,150 @@
+:root  {
+    --main-bg-color: hsl(217, 54%, 11%);
+    --card-bg-color: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --white-color: hsl(0, 0%, 100%);
+    --cyan-color: hsl(178, 100%, 50%);
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.card-content {
+    background-color: var(--card-bg-color);
+    padding: 1.2em;
+    border-radius: 2%;
+    width: min-content;
+}
+
+.img-container {
+    position: relative;
+}
+
+.card-overlay {
+    position: absolute;
+    border-radius: 2%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: hsl(178, 100%, 50%, 0.5);
+}
+
+.img-container:hover .card-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card-image {
+    display: block;
+    width: 33vh;
+    height: 33vh;
+    border-radius: 2%;
+}
+
+.card-text {
+    font-family: 'Outfit', sans-serif;
+    color: hsl(215, 51%, 70%);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.card-title > a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.card-title > a:hover {
+    color: var(--cyan-color);
+}
+
+.card-description {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0.5rem 0;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.price-text {
+    color: var(--cyan-color);
+}
+
+.card-text > hr {
+    color: var(--line-color);
+    opacity: 0.5;
+}
+
+.card-creator {
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.creator-photo {
+    width: 2em;
+    height: 2em;
+    margin-right: 0.8em;
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+}
+
+.creator-name > a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.creator-name > a:hover {
+    color: var(--cyan-color);
+}
+
+.eth-icon, .price.text, .clock-icon, .time-left-text, .creator-photo, .creator-name {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.attribution { 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
